@@ -2,18 +2,56 @@
 <html>
     <head>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Portales web 1 seccion 1801</title>
-        <body>
-          <h1 id="idx">Portales Web I Primer parcial </h1>
+       
+       <link rel="stylesheet" href="estilos/estilos.css"/>
+       <link rel="stylesheet" href="estilos/grid.css"/>
+        <script>
+          let mensajeMostrar = "Click al presionar el Id ch1";
+          document.addEventListener("DOMContentLoaded", () =>{
+               let ch1Element = document.getElementById("ch1");
+               ch1Element.addEventListener("click",(e)=>{
+                e.preventDefault();
+                e.stopPropagation();
+                alert("click al presionar id ch1");
+
+               });
+          });  
+        </script>
+        <script src = "js/script.js"></script>
+       <body>
+          <header>
+            <div>
+              <img src="https://picsum.photos/id/96/64/64"alt ="brand logo" />
+          <h1 id="idx" onclick="alert('Hacer click')">Portales Web I Primer parcial </h1>
+        
+        </div>
+        <nav>
           <ul>
-            <li><a href="#ch1">Representacion de contenido de texto</a></li>
-            <li><a href="#ch2">Listas ordenadas y No ordenadas</a></li>
-            <li><a href="#ch3">Hipervinculos y Navegacion </a></li>
+            <li><a href="#ch1" title = "Represtanciond de textos en html">Representacion de contenido de texto</a></li>
+            <li><a href="#ch2" title = "listas ordenadas y no ordenadas">Listas ordenadas y No ordenadas</a></li>
+            <li><a href="#ch3" title="Hipervinculos y navegacion">Hipervinculos y Navegacion </a></li>
             <li><a href="#ch4">Multimedia </a></li>
             <li><a href="#ch5">Tablas </a></li>
             <li><a href="#ch6">Formularios </a></li>
             <li><a href="#ch7">Contenedores Semanticos</a></li>
           </ul>
+        </nav>
+        </header>
+        <main>
+          <section hero ="hero-panel">
+            <picture>
+              <source srcset="https://picsum.photos/id/45/1300/900" media = "(min-width:1025px)" />
+              <source srcset="https://picsum.photos/id/45/1300/900" media = "(min-width:900px)" />
+              <img src="https://picsum.photos/id/45/400/400 "alt = "hero panel image"/>
+            </picture>
+            <div class="q2">
+              <h2>clase de portales</h2>
+              <a href="" class="btn access">Matriculate</a>
+            </div>
+          </section>
+          <div class="contendor">
           <h2 id ="ch1">Representacion de contenido de Texto</h2>
           <h3>Encabezados</h3>
           <p>
@@ -28,7 +66,7 @@
           <p>
             hypertext markup langue -> HTML
           </p>
-          <p>
+          <p style="line-height: 1.5;">
             Lorem ipsum dolor, sit amet 
             consectetur adipisicing elit. 
             Quaerat quibusdam, doloremque 
@@ -39,6 +77,25 @@
               doloribus.
           </p>
            <h3> Parrafos </h3>
+           <section class = "cardContainer">
+            <div class = "card">
+              <img src="https://picsum.photos/id/140/300/200"alt = "Imagen tarjeta"/>
+                <div class = "cardBody">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore earum nam consectetur reiciendis provident asperiores repellat rem, perspiciatis ullam. Dolorum exercitationem ab voluptatum accusamus animi quisquam eligendi non quis molestias.
+            </div>
+            
+            <div class ="cardFooter">
+              <button>Agregar</button>
+            </div>
+            </div>
+           </section>
+           <div>
+            <img href = "https://plholder.co/64x64" alt="Profile pic">
+            <em> Este es mi testimonio de lo bueno que es pw</em>
+           </div>
+              <div>
+                dadadad@gmail.com
+              </div>   
           <h4>Lorem Ipsum</h4>
           <a href="idx">Ir a la incio</a>
           <h2 id= "ch2">Listas ordenadas y No ordenadas</h2>
@@ -47,11 +104,14 @@
             Son listas que no establece un orden particular, simplemente enuncian
             elementos comunes de un dominio
             <!--Ol Orden List-->
-            <ul>
+            <ul class ="smallTag">
               <li>
-                 <!-----List item -->
-                 Huevos
+                 <div>
+                <img src="https://placehold.co/180x64" alt ="inline" />
+                <span>Huevos</span>  
+              </div>
               </li>
+            
               <li>
                 Leche
               </li>
@@ -95,17 +155,200 @@
           </p>
           <a href="idx">Ir a la incio</a>
           <h2 id = "ch3">Hipervinculos y Navegacion </h2>
+          <section class="grid">
+            <div class="row center">
+              <div class="col-1">1</div>
+              <div class="col-1">1</div>
+              <div class="col-1">1</div>
+              <div class="col-1">1</div>
+              <div class="col-1">1</div>
+              <div class="col-1">1</div>
+              <div class="col-1">1</div>
+              <div class="col-1">1</div>
+              <div class="col-1">1</div>
+              <div class="col-1">1</div>
+              <div class="col-1">1</div>
+              <div class="col-1">1</div>
+
+
+            </div>
+
+            <div class="row">
+              <div class="col-2">2</div>
+              <div class="col-2">2</div>
+              <div class="col-2">2</div>
+              <div class="col-2">2</div>
+              <div class="col-2">2</div>
+              <div class="col-2">2</div>
+              <div class="col-2">2</div>
+              <div class="col-2">2</div>
+            </div>
+          </section>
+
+          <section class="grid">
+            <div class = "row">
+            <div class ="col-4">
+              <img src="htpps://placehold.co/180x300"alt="profile"/>
+            </div>
+            </div>
+             <div class ="col-8">
+              <div class ="row">
+                <div class = "col-6">
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum odit inventore optio numquam officia nihil voluptatum similique repellat qui voluptas. Tempore animi iste deleniti, reiciendis pariatur dignissimos maxime nostrum necessitatibus.</p>
+                </div>
+              </div>
+             </div>
+          </section>
+
+
          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque possimus totam nisi laborum ipsa vel, error magnam necessitatibus voluptatum inventore dolor repellendus vitae magni vero dicta. Officiis esse rerum nihil.</p>
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et aliquid delectus earum consectetur quis odit reprehenderit saepe repudiandae blanditiis itaque temporibus commodi iure quos qui aut aperiam, placeat dignissimos vel.</p>
          <p> 
           Hipervinculos Relativos van a documentos dentro del mismo sitio <br/>
         <a href="Relativos.html"> Ir a pagina relativa </a>
+        <a href="Tercerparcial/javascript.html"></a>
+        </p>
+        <!-----https://www.unicah.edu:9090/algo/pagina.html-->
+        <!--(Protocolo):// (subdominio).(dominio)[:puerto 80]/recurso-->
+        <!--- Linux apache 2 nginx var/www/http/ wamp xamp http/-->
+        <!-- Recurso predeterminado index.html-->
+
+        <p>
+          <a href="https://www.unicah.edu" target="_blank">UNICAH</a>
         </p>
          <a href="idx">Ir a la incio</a>
           <h2 id ="ch4">Multimedia</h2>
+          <h3>Imagenes</h3>
+          <p> Una imagen valen por mil palabras</p>
+
+          <h4> Dos tipos de imagenes </h4>
+          <ol>
+            <li>Mapas de bits: Photoshop, gimp, ilustrador</li>
+            <p>
+              Dimesiones: Alto,ancho px <br/>
+              ppp (puntos por pulgada): <br/>
+              dpi(dot per inch):
+            </p>
+            <li>Vectoriales:Inkscape,corel draw,ilustrador,Sketchbook, </li>
+          </ol>
+         <img src="/foto/selfie_web.jpg" alt="Foto de perfil" />    
+         
+         <picture>
+          <source srcset=" https://picsum.photos/id/212/1200/720" media="(min-width: 1025px)"/>
+          <source srcset="https://picsum.photos/id/212/1024/648" media="(min-width:481px)"/>
+          <img src="https://picsum.photos/id/212/480/480" alt="Calle en paris"/>
+         </picture>
+        <audio controls>
+          <source srcset="xxxxx.mp3"type="audio/mp3" media ="(min-width:1024)" />
+            <source src="xxxxx.mp3"type="audio/mp3" />
+            <source src="xxxx.ogg"type="audio/vorbis" />
+        </audio>
+
+        <video controls>
+          <source src="llllll.mp4"type="video/mp4"/>
+          <source src="llllll.ogg"type="video/vorbis"/>
+
+        </video>
           <h2 id = "ch5">Tablas</h2>
+
+          <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Odio debitis quisquam ex, ab eos, nisi veniam officia culpa optio 
+            ipsam aspernatur aliquid ad repellat aut, laborum nobis incidunt quod cum!
+
+          </P>
+          <table border = "1 ">
+            <thead>
+            <tr>
+              <th colspan="6">Tabla de ventas promedio del 2025 de la trucha </th>
+              
+            </tr>
+            <tr>
+              <th>Region</th>
+              <th>Ciudad</th>
+              <th>Q1</th>
+              <th>Q2</th>
+              <th>Q3</th>
+              <th>Q4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2"> Norte</td>
+              <td>La ceiba</td>
+              <td>80</td>
+              <td>76</td>
+              <td>84</td>
+              <td>90</td>
+            </tr>
+            <tr>
+              <td>San Pedro SUla</td>
+              <td>100</td>
+              <td>80</td>
+              <td>90</td>
+              <td>82</td>
+            </tr>
+            <tr>
+              <td rowspan="3">Centro</td>
+              <td>Comayagua</td>
+              <td>90</td>
+              <td>100</td>
+              <td>97</td>
+              <td>87</td>
+
+            </tr>
+            <tr>
+              
+              <td>Tegucigalpa</td>
+              <td>90</td>
+              <td>78</td>
+              <td>76</td>
+              <td>77</td>
+            </tr>
+            <tr>
+             
+              <td>Danli</td>
+              <td>79</td>
+              <td>68</td>
+              <td>97</td>
+              <td>89</td>
+            </tr>
+            <tr>
+              <td rowspan="2" >Sur</td>
+              <td>Choluteca</td>
+              <td>90</td>
+              <td>67</td>
+              <td>99</td>
+              <td>87</td>
+            </tr>
+            <tr>
+        
+              <td>San marcos</td>
+              <td>56</td>
+              <td>66</td>
+              <td>78</td>
+              <td>90</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2">Promedio</td>
+              <td>87</td>
+              <td>89</td>
+              <td>94</td>
+              <td>92</td>
+            </tr>
+          </tfoot>
+          </table>
           <h2 id = "ch6">Formularios</h2>
+
+
+          
           <h2 id = "ch7">Contenedores Semanticos</h2>
         </body>
+      </main>
+    </div>
+      <footer>
+        Copyright
+      </footer>
     </head>
 </html>

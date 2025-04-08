@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../js/Estilo.css"/>
+    <script src="../js/Validaciones.js"></script> 
+    <title>Página Completa</title>
+</head>
+<body>
+    <header>
+        <h1>Mi Página Web</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="carrusel">
+        <div class="track">
+            <div class="hero slide1">Bienvenido a Nuestra Web</div>
+            <div class="hero slide2">Descubre nuestros servicios</div>
+            <div class="hero slide3">Contáctanos para más información</div>
+        </div>
+    </div>
+    
+    <section id="inicio">
+        <div>
+            <h2>Bienvenido</h2>
+            <p>Esta es una página con estructura básica en HTML.</p>
+        </div>
+    </section>
+    
+    <section id="nosotros">
+        <div>
+            <h2>Sobre Nosotros</h2>
+            <p>Información sobre nuestra empresa.</p>
+        </div>
+    </section>
+    
+    <section id="servicios">
+        <div>
+            <h2>Nuestros Servicios</h2>
+            <p>Descripción de los servicios que ofrecemos.</p>
+        </div>
+    </section>
+    
+    <section id="contacto">
+        <div id="divPrimerNombre">
+            <h2>Contacto</h2>
+            <p>Información de contacto y formulario.</p>
+            <form id="formSolicitud" action="indexNuevo.html" method="get">
+                <div id="divPrimerNombre">
+                    <label for="txtPrimerNombre">Primer Nombre</label>
+                    <input type="text" id="txtPrimerNombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div id="divEmail">
+                    <label for="txtEmail">Correo Electrónico</label>
+                    <input type="text" id="txtEmail" name="email" required>
+
+                </div>
+
+                <div>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Tu mensaje" required></textarea>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mi Página Web. Todos los derechos reservados.</p>
+    </footer>

@@ -1,0 +1,133 @@
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+header {
+    background-color: #005c99;
+    color: white;
+    padding: 1rem;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    margin: 0.5rem;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.hero {
+    background-image: url('../assets/images/agua1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.news, .gallery, .form-section {
+    padding: 2rem;
+}
+footer {
+    background-color: #003d66;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+form button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+}
+.slider {
+    display: flex;
+    overflow: hidden;
+    max-width: 100%;
+    margin-top: 1rem;
+}
+.slider img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+.slider img.active {
+    display: block;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+        background-color: #005c99;
+    }
+    nav ul.show {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+        color: white;
+        text-align: right;
+        padding: 1rem;
+    }
+}
+
+.testimonios {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+.carrusel {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.testimonio {
+    display: none;
+    padding: 1rem;
+}
+.testimonio.active {
+    display: block;
+    animation: fade 1s ease-in-out;
+}
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.animada {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+    margin: 2rem;
+}
+.animada.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

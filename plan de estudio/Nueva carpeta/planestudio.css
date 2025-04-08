@@ -1,0 +1,51 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+.plan-container {
+    max-width: 1000px;
+    margin: auto;
+}
+.plan-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.plan-block {
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.plan-block-label {
+    font-weight: bold;
+    background: #007acc;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.plan-block-classes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+.asignatura {
+    background: #e6e6e6;
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.2s;
+}
+.asignatura.active {
+    transform: scale(1.05);
+    background: #ffe599;
+}
+.asignatura.requisito {
+    background: #d9ead3;
+}
+.asignatura.apertura {
+    background: #cfe2f3;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width= device-width,initial-scale=1.0">
+        <title>Formulario</title>
+    </head>
+    <body>
+        <h1>Formulario</h1>
+       <form action="solicitud_prestamo.html" method="get"></form>
+       <label for ="txtPrimernombre">Primer nombre</label>
+       <input type="text" name = "txtPrimernombre" id="txtPrimernombre" placeholder="Primer nombre" title="Primer nombre quien solicita prestamo"/>
+       <br/>
+       <label for ="txtSegundonombre">Segundo nombre</label>
+       <input type="text" name = "txtSegundoNombre" id="txtSegundoNombre" placeholder="Segundo nombre" title="Segundo nombre quien solicita prestamo"/>
+       <br/>
+       <label for ="txtPrimerApellido">Primer apellido</label>
+       <input type="text" name = "txtPrimerApellido" id="txtPrimerApellido" placeholder="Primer Apellido" title="Primer Apellido quien solicita prestamo"/>
+       <br/> 
+       <label for ="txtSegundoApellido">Segundo apellido</label>
+       <input type="text" name = "txtSegundoApellido" id="txtSegundoApellido" placeholder="Segundo Apellido" title="Segundo Apellido quien solicita prestamo"/>
+       <br/> 
+       <label for ="email">Correo</label>
+       <input type="email" name = "email" id="email" placeholder="Correo" title="Correo quien solicita prestamo"/>
+       <br/> 
+       <label for ="txtCiudad">Direccion</label>
+       <input type="text" name = "txtDireccion" id="Direccion" placeholder="Direccion" title="Direccion quien solicita prestamo"/>
+       <br/> 
+       <label for ="txtCiudad">Ciudad</label>
+       <input type="text" name = "txtCiudad" id="txtCiudad" placeholder="Ciudad" title="Ciudad quien solicita prestamo"/>
+       <br/> 
+       <label for = "Estado"> Departamento </label>
+            <select name="Estado" id="Estado">
+            <option value="atlantida">Atlántida</option>
+            <option value="colon">Colón</option>
+            <option value="comayagua">Comayagua</option>
+            <option value="copan">Copán</option>
+            <option value="cortes">Cortés</option>
+            <option value="choluteca">Choluteca</option>
+            <option value="el-paraiso">El Paraíso</option>
+            <option value="francisco-morazan">Francisco Morazán</option>
+            <option value="gracias-a-dios">Gracias a Dios</option>
+            <option value="intibuca">Intibucá</option>
+            <option value="islas-de-la-bahia">Islas de la Bahía</option>
+            <option value="la-paz">La Paz</option>
+            <option value="lempira">Lempira</option>
+            <option value="ocotepeque">Ocotepeque</option>
+            <option value="olancho">Olancho</option>
+            <option value="santa-barbara">Santa Bárbara</option>
+            <option value="valle">Valle</option>
+            <option value="yoro">Yoro</option>
+            </select>
+            <br/>
+        <label for ="txtCodigoPostal">CodigoPostal</label>
+        <input type="text" name = "txtCodigoPostal" id="txtCodigoPostal" placeholder="CodigoPostal" title="CodigoPostal quien solicita prestamo"/>
+        <br/> 
+        <label>Nivel de educación actual</label>
+
+        <input type="radio" name="NivelEducacion" value="Prepa" id="NivelPreparatoria" checked/> 
+        <label for="NivelPreparatoria">&nbsp;Preparatoria</label>
+        &nbsp;
+        <input type="radio" name="NivelEducacion" value="Lic" id="NivelLicenciatura"/> 
+        <label for="NivelLicenciatura">&nbsp;Licenciatura</label>
+        &nbsp;
+        <input type="radio" name="NivelEducacion" value="Maes" id="NivelMaestria"/> 
+        <label for="NivelMaestria">&nbsp;Maestría</label>
+        &nbsp;
+        <input type="radio" name="NivelEducacion" value="Doctorado" id="NivelDoctorado"/> 
+        <label for="NivelDoctorado"> &nbsp;Doctorado</label>
+        <br/>
+        <label>Programa de estudio</label>
+        &nbsp;
+        <input type="radio" name="ProgramaEstudio" value="Computacion" id="CienciasComputacion" checked/> 
+        <label for="CienciasComputacion">&nbsp;Ciencias de la Computación</label>
+        &nbsp;
+        <input type="radio" name="ProgramaEstudio" value="Ingenieria" id="Ingenieria"/> 
+        <label for="Ingenieria">&nbsp;Ingeniería</label>
+        &nbsp;
+        <input type="radio" name="ProgramaEstudio" value="Economia" id="Economia"/> 
+        <label for="Economia">&nbsp;Economía</label>
+        &nbsp;
+        <input type="radio" name="ProgramaEstudio" value="Artes" id="Artes"/> 
+        <label for="Artes">&nbsp;Artes</label>
+        &nbsp;
+        <input type="radio" name="ProgramaEstudio" value="Otro" id="Otro"/> 
+        <label for="Otro">&nbsp;Otro</label>
+        <br/>
+        <label for ="txtMonto">Monto de prestamo</label>
+        <input type="text" name = "txtMonto" id="txtMonto" placeholder="Monto" title="Monto quien solicita prestamo"/>
+        <br/> 
+        <label for = "txtRazon"> Razon del prestamo</label><br/>
+            <textarea id="txtRazon" name="txtRazon"cols ="50" rows="8" placeholder="Esto es un texto"
+            ></textarea>
+            <input type ="submit" name = "btnEnviar" id = "btnEnviar" value="Enviar"/>
+            &nbsp;
+        </body>
+    </html>

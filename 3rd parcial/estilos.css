@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/*
+serifas
+sin serifas
+monoespaciadas
+
+*/
+
+* {
+    font-family: "Roboto", Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    line-height: 2;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header div h1 {
+    font-size: 1.1rem;
+    margin: 0px;
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+}
+
+header div img {
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin: 0.1rem 0.5rem;
+}
+header nav {
+    width:100%;
+}
+header nav ul {
+    list-style: none;
+    padding: 0px;
+    gap: 0.25rem;
+    width:100%;
+}
+
+header nav ul li {
+    width:100%;
+}
+header nav ul li a {
+    display: inline-block;
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    width:100%;
+    /*
+    padding: 0.75rem 1.5rem;
+    padding: 0.75rem;
+    */
+    /*
+    margin: 0.75rem 1.5rem 0.75rem 1.5rem;
+    margin: 0.75rem 1.5rem;
+    margin: 0.75rem;
+    */
+    text-decoration: none;
+    /*text-align: center;*/
+    /* Trouble  TRBL  Top Right Bottom Left */
+    border-bottom: 1px solid #eee;
+}
+
+header nav ul li a:hover {
+    background-color: beige;
+    color: #000;
+}
+
+
+.contenedor {
+    max-width: 1024px;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    overflow: hidden
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    overflow: hidden;
+    width: 320px;
+    border: 1px solid #000;
+    border-radius: 9px;
+    box-shadow: 3px 3px 5px #000;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card .cardBody {
+    padding: 0.5rem;
+}
+
+.card .cardFooter button {
+    background-color: darkcyan;
+    color: #fff;
+    width: 100%;
+    border: 1px solid darkslateblue;
+    padding: 0.85rem 0.75rem;
+}
+
+/*
+Unidades de Longitud
+
+Absolutas
+1px
+1cm
+1in
+1yd
+
+Relativas
+100%
+100vh
+100vw
+1em
+1rem
+
+*/
+
+.demoEMRem {
+    font-size: 2em;
+}
+
+.demoEMRem p {
+    font-size: 2rem
+}
+
+.smallTags {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0px;
+}
+
+.smallTags li {
+    margin: 1rem 0rem;
+}
+
+.smallTags li div {
+    background-color: #9f9c02;
+    padding: 0.8rem 0.5rem;
+    border: 1px solid #575501
+}
+
+.smallTags li div img,
+.smallTags li div span {
+    display: block;
+}
+
+.carrusel {
+    display:block;
+    position:relative;
+    overflow: hidden;
+    width: 100%;
+    height: 80vh;
+}
+
+.carrusel .track {
+    display:flex;
+    position: absolute;
+    top:0px;
+    left:0px;
+    transition: transform 0.5s ease-in-out;
+}
+.carrusel button[class*='btn'] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 2.5rem 1rem;
+    border-radius: 9px;
+    box-shadow: 1px 1px 3px #000;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.carrusel  button[class*='btn']:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carrusel  button[class*='btn']:focus {
+    outline: none;
+}
+
+.carrusel  button.btn-left {
+    left: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.carrusel  button.btn-right {
+    right: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.carrusel div.nav{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carrusel div.nav button{
+    display: inline-block;
+    cursor: pointer;
+    background-color: white;
+    color:#333;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.carrusel div.nav button.active{
+    background-color: #333;
+    color:#fff;
+}
+
+
+.hero-panel {
+    flex: 0 0 100%;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.hero-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 1.5s ease-in-out transform
+}
+
+.hero-panel div {
+    /* top bottom right left */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1.5rem;
+    box-shadow: 1px 1px 3px #000;
+    border-radius: 9px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-panel div.q1 {
+    top: 25%;
+    left: 25%;
+}
+
+.hero-panel div.q2 {
+    top: 25%;
+    left: 75%;
+}
+
+.hero-panel div.q3 {
+    top: 75%;
+    left: 25%;
+}
+
+.hero-panel div.q4 {
+    top: 75%;
+    left: 75%;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #eee;
+    background-color: steelblue;
+    padding: 0.75rem 1rem;
+    border-radius: 17px;
+    box-shadow: 1px 1px 3px #1c3448;
+}
+
+form {
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+form div {
+    flex:1 1 100%;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:0.5rem;
+}
+form div div.error {
+    color: red;
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 0.25rem 1rem 0.5rem 1rem;
+}
+form div label {
+    font-weight: bold;
+    width: 30%;
+}
+
+form div input {
+    font-size:1rem;
+    padding:0.25rem 0.5rem;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    width: 60%;
+}
+form div input.error {
+    border-color: red;
+    outline-color: red;
+}
+
+form div button {
+    font-size:1rem;
+    padding:0.25rem 0.5rem;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: #fff;
+}
+
+
+.right {
+    justify-content:flex-end;
+}
+/*
+Media Queries
+Consultar Metdata del dispositivo
+min-width
+disposition
+scale
+density
+
+
+sin media query    mobile
+
+media query minwidth 768px   tablet
+
+media query minwithd 1025px   desktop
+
+media query minwidth 2300px   wide
+*/
+
+@media (min-width: 768px) {
+    header {
+        background-color: #777;
+    }
+    header nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header nav ul li {
+        width:auto;
+    }
+    header nav ul li a {
+        border-bottom: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        background-color: #510000;
+        flex-direction: row;
+    }
+    header nav{
+        width:auto;
+    }
+    header nav ul li {
+        width:auto;
+    }
+}
+
+@media (min-width: 2300px) {
+    header {
+        background-color: #000;
+    }
+}

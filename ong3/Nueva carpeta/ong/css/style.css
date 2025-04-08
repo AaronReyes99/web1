@@ -1,0 +1,258 @@
+  
+:root {
+  --primary: #fdd835;
+  --dark: #003049;
+  --light: #ffffff;
+  --gray: #f4f4f4;
+  --text: #333333;
+  --transition: 0.3s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--gray);
+  color: var(--text);
+  line-height: 1.6;
+  transition: var(--transition);
+}
+
+header {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 1.5rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav ul li a {
+  color: var(--light);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+nav ul li a:hover {
+  background-color: var(--primary);
+  color: var(--dark);
+}
+
+.hero {
+  background-image: url('../assets/images/agua1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--light);
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.hero * {
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  padding: 3rem 2rem;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--dark);
+}
+
+.button {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--dark);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.button:hover {
+  background: var(--dark);
+  color: var(--light);
+}
+
+footer {
+  background: var(--dark);
+  color: var(--light);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form input:focus, form textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 5px var(--primary);
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero {
+    padding: 4rem 1rem;
+  }
+}
+
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark);
+    width: 100%;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+}
+
+/* Slider */
+.slider img {
+  display: none;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: opacity 1s ease-in-out;
+}
+.slider img.active {
+  display: block;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #f4f4f4;
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode nav ul {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .button {
+  background-color: #333;
+  color: var(--primary);
+}
+
+
+.counter-box {
+  text-align: center;
+  padding: 1rem;
+  flex: 1;
+  min-width: 120px;
+}
+
+.counter {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+#impact-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+
+.donate-btn {
+  background-color: var(--primary);
+  color: var(--dark);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  transition: transform 0.2s ease, background-color 0.3s;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.donate-btn:hover {
+  background-color: var(--dark);
+  color: var(--light);
+  transform: scale(1.05);
+}
+
+
+.contact-btn {
+  background-color: var(--primary);
+  color: var(--dark);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  transition: transform 0.2s ease, background-color 0.3s;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background-color: var(--dark);
+  color: var(--light);
+  transform: scale(1.05);
+}
